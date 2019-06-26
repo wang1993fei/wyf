@@ -1,0 +1,27 @@
+案例13：虚拟机 server0上操作,绑定到LDAP验证服务
+
+ –  使用系统 classroom.example.com 提供的LDAP服务
+ –  验证服务的基本DN是：dc=example,dc=com
+ –  账户信息和验证信息都是由 LDAP 提供的
+ –  连接要使用证书加密，证书可以在下面的链接下载：
+      http://classroom.example.com/pub/example-ca.crt 
+ –  确认本地可以识别ldapuser10用户
+
+案例28:在server上操作，配置一个数据库
+– 为mariadb数据库root设置登陆密码为 haxi
+– 新建一个数据库名为 nsd
+– 除了 root 用户,此数据库只能被用户 lisi 查询,此用户的密码为 123(用户的授权)
+– 数据库 nsd 中应该包含来自数据库复制的内容,
+复制文件的 URL为:http://classroom/pub/materials/users.sql
+
+案例4：为虚拟机 server 部署动态WSGI站点
+为站点 webapp0.example.com 配置提供动态Web内容，要求如下：
+1）此虚拟主机侦听在端口8909
+2）测试网页从以下地址下载，不要作任何更改http://classroom/pub/materials/webinfo.wsgi 
+3）从浏览器访问 http://webapp0.example.com:8909 可接收到动态生成的 Web 页面
+
+案例5：配置安全Web服务
+为站点 http://server0.example.com 配置TLS加密 
+1）一个已签名证书从以下地址获取 http://classroom/pub/tls/certs/server0.crt 
+2）此证书的密钥从以下地址获取 http://classroom/pub/tls/private/server0.key 
+3）此证书的签名授权信息从以下地址获取 http://classroom/pub/example-ca.crt
